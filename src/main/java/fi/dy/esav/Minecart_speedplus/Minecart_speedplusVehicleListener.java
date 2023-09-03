@@ -94,9 +94,9 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                   if(cart.getPassengers().size()==1) {
                 	  if(cart.getPassengers().get(0) instanceof Player) {
                 		  Player p = (Player)cart.getPassengers().get(0);
-            			  plugin.titleApi.sendTitleWithPlaceholders(p,&e+text[1]);
-            			  plugin.titleApi.sendSubtitleWithPlaceholders(p,");
-            			  plugin.titleApi.sendActionbarWithPlaceholders(p,");
+            			  plugin.titleApi.sendTitleWithPlaceholders(p, "&e即将进站"+text[1]);
+            			  plugin.titleApi.sendSubtitleWithPlaceholders(p,"已进入安全区域");
+            			  plugin.titleApi.sendActionbarWithPlaceholders(p,"感谢乘坐天际轨道交通");
                 	  }
                   }
               }
@@ -105,9 +105,9 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                   if(cart.getPassengers().size()==1) {
                 	  if(cart.getPassengers().get(0) instanceof Player) {
                 		  Player p = (Player)cart.getPassengers().get(0);
-            			  plugin.titleApi.sendTitleWithPlaceholders(p, "&e+text[1]);
-            			  plugin.titleApi.sendSubtitleWithPlaceholders(p,");
-            			  plugin.titleApi.sendActionbarWithPlaceholders(p,");
+            			  plugin.titleApi.sendTitleWithPlaceholders(p, "&e前方到站:"+text[1]);
+            			  plugin.titleApi.sendSubtitleWithPlaceholders(p,"即将离开安全区域");
+            			  plugin.titleApi.sendActionbarWithPlaceholders(p,"欢迎乘坐轨道交通");
                 	  }
                   }
               }
@@ -157,10 +157,10 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                     		  //plugin.titleApi.clearTitles(p);
                     		  if(this.line1 < 1.9D) {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  plugin.titleApi.sendActionbarWithPlaceholders(p,"&e);
+                    			  plugin.titleApi.sendActionbarWithPlaceholders(p,"&e列车正在减速");
                     		  }else {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  plugin.titleApi.sendActionbarWithPlaceholders(p,"&e);
+                    			  plugin.titleApi.sendActionbarWithPlaceholders(p,"&e列车正在加速,请保持前进方向");
                     		  }
                     	  }
                       }
