@@ -1,12 +1,7 @@
 package fi.dy.esav.Minecart_speedplus;
 
-import java.util.logging.Logger;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.Sound;
-import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Minecart;
@@ -16,6 +11,8 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.vehicle.VehicleCreateEvent;
 import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.util.Vector;
+
+import java.util.logging.Logger;
 
 public class Minecart_speedplusVehicleListener implements org.bukkit.event.Listener
 {
