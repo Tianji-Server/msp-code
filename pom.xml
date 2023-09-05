@@ -6,7 +6,7 @@
 
     <groupId>fi.dy.esav.Minecart_speedplus</groupId>
     <artifactId>Minecart_speedplus</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>Minecart_speedplus</name>
