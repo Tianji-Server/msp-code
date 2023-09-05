@@ -83,6 +83,7 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
             			  p.sendMessage(text[1]);
             			  p.sendMessage(text[2]);
             			  p.sendMessage(text[3]);
+                      return;
                 	  }
                   }
               }
@@ -133,9 +134,11 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                     		  if(this.line1 < 1.9D) {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
                     			  p.sendMessage("&e列车正在减速");
+                            return;
                     		  }else {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
                     			  p.sendMessage("&e列车正在加速,请保持前进方向");
+                            return;
                     		  }
                     	  }
                       }
