@@ -157,7 +157,7 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                     			  p.sendMessage("&e列车正在减速");
                     		  }else {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  p.sendMessage(p,"&e列车正在加速,请保持前进方向");
+                    			  p.sendMessage("&e列车正在加速,请保持前进方向");
                     		  }
                     	  }
                       }
