@@ -81,9 +81,9 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                       if(cart.getPassengers().size()==1) {
                           if(cart.getPassengers().get(0) instanceof Player) {
                               Player p = (Player)cart.getPassengers().get(0);
-                              plugin.titleApi.sendTitleWithPlaceholders(p,text[1]);
-                              plugin.titleApi.sendSubtitleWithPlaceholders(p,text[2]);
-                              plugin.titleApi.sendActionbarWithPlaceholders(p,text[3]);
+                              plugin.titleApi.sendTitleWithPlaceholders(text[1]);
+                              plugin.titleApi.sendSubtitleWithPlaceholders(text[2]);
+                              plugin.titleApi.sendActionbarWithPlaceholders(text[3]);
                           }
                       }
                   }
@@ -134,10 +134,10 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                     		  //plugin.titleApi.clearTitles(p);
                     		  if(this.line1 < 1.9D) {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  plugin.titleApi.sendActionbarWithPlaceholders(p,ChatColor.GOLD + "列车正在减速");
+                    			  plugin.titleApi.sendActionbarWithPlaceholders(ChatColor.GOLD + "列车正在减速");
                     		  }else {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  plugin.titleApi.sendActionbarWithPlaceholders(p,ChatColor.GOLD + "列车正在加速,请保持前进方向");
+                    			  plugin.titleApi.sendActionbarWithPlaceholders(ChatColor.GOLD + "列车正在加速,请保持前进方向");
                     		  }
                     	  }
                       }
