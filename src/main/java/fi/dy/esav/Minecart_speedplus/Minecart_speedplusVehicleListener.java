@@ -76,35 +76,13 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
             {
               Sign sign = (Sign)this.block.getState();
               String[] text = sign.getLines();
-              if (text[0].equalsIgnoreCase("[msptitle]")) {
+              if (text[0].equalsIgnoreCase("[mspmsg]")) {
                   if(cart.getPassengers().size()==1) {
                 	  if(cart.getPassengers().get(0) instanceof Player) {
                 		  Player p = (Player)cart.getPassengers().get(0);
             			  p.sendMessage(text[1]);
             			  p.sendMessage(text[2]);
             			  p.sendMessage(text[3]);
-                	  }
-                  }
-              }
-              
-              if (text[0].equalsIgnoreCase("[mspenter]")) {
-                  if(cart.getPassengers().size()==1) {
-                	  if(cart.getPassengers().get(0) instanceof Player) {
-                		  Player p = (Player)cart.getPassengers().get(0);
-            			  p.sendMessage("&e即将进站" + text[1]);
-            			  p.sendMessage("已进入安全区域");
-            			  p.sendMessage("感谢乘坐天际轨道交通");
-                	  }
-                  }
-              }
-              
-              if (text[0].equalsIgnoreCase("[mspexit]")) {
-                  if(cart.getPassengers().size()==1) {
-                	  if(cart.getPassengers().get(0) instanceof Player) {
-                		  Player p = (Player)cart.getPassengers().get(0);
-            			  p.sendMessage("&e前方到站:" + text[1]);
-            			  p.sendMessage("即将离开安全区域");
-            			  p.sendMessage("欢迎乘坐轨道交通");
                 	  }
                   }
               }
