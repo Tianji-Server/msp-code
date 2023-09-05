@@ -4,7 +4,6 @@ package fi.dy.esav.Minecart_speedplus;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -71,23 +70,22 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
             this.block = cart.getWorld().getBlockAt(this.blockx, this.blocky, this.blockz);
             
             this.blockid = cart.getWorld().getBlockAt(this.blockx, this.blocky, this.blockz).getBlockData().getMaterial().toString();
+            
 
-
-              if ((this.blockid == Material.OAK_WALL_SIGN.toString()) || (this.blockid == Material.OAK_SIGN.toString()))
-              {
-                  Sign sign = (Sign)this.block.getState();
-                  String[] text = sign.getLines();
-                  if (text[0].equalsIgnoreCase("[msptitle]")) {
-                      if(cart.getPassengers().size()==1) {
-                          if(cart.getPassengers().get(0) instanceof Player) {
-                              Player p = (Player)cart.getPassengers().get(0);
-                              plugin.titleApi.sendTitleWithPlaceholders(text[1]);
-                              plugin.titleApi.sendSubtitleWithPlaceholders(text[2]);
-                              plugin.titleApi.sendActionbarWithPlaceholders(text[3]);
-                          }
-                      }
+            if ((this.blockid == Material.OAK_WALL_SIGN.toString()) || (this.blockid == Material.OAK_SIGN.toString()))
+            {
+              Sign sign = (Sign)this.block.getState();
+              String[] text = sign.getLines();
+              if (text[0].equalsIgnoreCase("[mspmsg]")) {
+                  if(cart.getPassengers().size()==1) {
+                	  if(cart.getPassengers().get(0) instanceof Player) {
+                		  Player p = (Player)cart.getPassengers().get(0);
+            			  p.sendMessage(text[1]);
+            			  p.sendMessage(text[2]);
+            			  p.sendMessage(text[3]);
+                	  }
                   }
-
+              }
               
               if (text[0].equalsIgnoreCase("[s]")) {
                   if(cart.getPassengers().size()==1) {
@@ -134,10 +132,10 @@ public class Minecart_speedplusVehicleListener implements org.bukkit.event.Liste
                     		  //plugin.titleApi.clearTitles(p);
                     		  if(this.line1 < 1.9D) {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  plugin.titleApi.sendActionbarWithPlaceholders(ChatColor.GOLD + "列车正在减速");
+                    			  p.sendMessage("&e列车正在减速");
                     		  }else {
                     			  //plugin.titleApi.sendTitleWithPlaceholders(p, " ");
-                    			  plugin.titleApi.sendActionbarWithPlaceholders(ChatColor.GOLD + "列车正在加速,请保持前进方向");
+                    			  p.sendMessage("&e列车正在加速,请保持前进方向");
                     		  }
                     	  }
                       }
